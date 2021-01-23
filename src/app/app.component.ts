@@ -6,5 +6,39 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pages2';
+  currentPage = 2;
+  images = [
+    {
+      title: 'At the beach',
+      url: 'assets/images/beach.jpeg'
+    }, {
+      title: 'Go to the beach',
+      url: 'assets/images/beach2.jpeg'
+    }, {
+      title: 'end the summer',
+      url: 'assets/images/beach3.jpeg'
+    }, {
+      title: 'At the beach',
+      url: 'assets/images/beach.jpeg'
+    }, {
+      title: 'Go to the beach',
+      url: 'assets/images/beach2.jpeg'
+    }, {
+      title: 'end the summer',
+      url: 'assets/images/beach3.jpeg'
+    }, {
+      title: 'At the beach',
+      url: 'assets/images/beach.jpeg'
+    }, {
+      title: 'Go to the beach',
+      url: 'assets/images/beach2.jpeg'
+    }, {
+      title: 'end the summer',
+      url: 'assets/images/beach3.jpeg'
+    },
+  ];
+
+  checkWindowIndex(index: number) {
+    return Math.abs(this.currentPage - index) < 5;
+  }
 }
